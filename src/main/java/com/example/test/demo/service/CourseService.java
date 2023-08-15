@@ -17,13 +17,11 @@ public class CourseService {
         this.courseRepository = courseRepository;
     }
 
-    public Mono<Course> createCourse(Course course)
-    {
+    public Mono<Course> createCourse(Course course) {
         return courseRepository.save(course);
     }
 
-    public Mono<Course> findCourse(Long Id)
-    {
+    public Mono<Course> findCourse(Long Id) {
         return courseRepository.findById(Id);
     }
 

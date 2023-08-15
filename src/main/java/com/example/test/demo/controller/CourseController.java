@@ -16,17 +16,17 @@ public class CourseController {
 
     @PostMapping("/courses")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<Course> createCourse(@RequestBody Course course)
-    {
+    public Mono<Course> createCourse(@RequestBody Course course) {
         return courseService.createCourse(course);
     }
 
 
     @GetMapping("/course/{courseId}")
     @ResponseStatus(HttpStatus.FOUND)
-    public Mono<Course> getCourse(@PathVariable Long courseId)
-    {
+    public Mono<Course> getCourse(@PathVariable Long courseId) {
         return courseService.findCourse(courseId);
     }
+
+
 
 }
